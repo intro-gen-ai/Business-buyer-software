@@ -1,47 +1,99 @@
 # Project Name 
-Short description of project.
+“Business Buyer Software”:
 
-Project Notes:
-
-- Please remember to keep your repo private when you create it from this template.
-- Be sure to create your report in the **intro-gen-ai** organization. 
-- The name of the repo should be the name of the project, or a shortened version of the name.
-- Each section should be completed by the deadline indicated. You submit by making a commit of this README.md file. Except for minor edits, please do no change the Proposal, Goals, or Metrics sections after the submission deadline.
-- General guidance on formatting writing in markdown files (like this README.md file) is at https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax.
-- There is a [recording of the the class discussion on the use of this template](https://vanderbilt.zoom.us/rec/share/RjihScz0Ti7RId0KMj7GWBc8XueS571_JnFqDQwli0AuKLsgaau0j_RcphBjwYtV.HP10ROf2TwPUn6TA?startTime=1697553005000).
-- You can sign up for a time to discuss your ideas for the project at https://calendly.com/jesse-spencer-smith. We'll also be discussing project in class on Tuesday after Fall Break.
-- Remember that there is an AI Showcase on December 1 (with prizes for Best in Show), so you might want to consider completing your project by then. 
+This is a tool to help potential business buyers make more informed decisions when trying to buy a business.
 
 ## Project PI/Project Team 
-**Due October 26, 11:59pm**
 
-Name, Vandy email, VUNetID, Role
+Name: Jeremiah Woldabezgi
+
+Vandy email: Jeremiah.woldabezgi@vanderbilt.edu
+
+VUNetID: Woldabjs
+
+Role: Sole Project Developer
+
+
+
+
+
 
 ## Project Proposal 
-**Due October 26, 11:59pm**
-
-300-1000 words total across all of the sections below
 
 ### Description of Problem/Opportunity
 
+There is so much analysis that goes into decisions regarding the purchase of a business. Large institutional business buyers hire analysts who’s sole role is to help the decision makers make better decisions by analyzing data and demonstrating that data to the decision makers in consummable way. Regular everyday business buyers can’t afford to hire analysts for this role.
+
+Business Buyer Suite is a software tool that helps users make more informed and more well thought out decisions on if they should buy a business or not by helping the owner project out into the future and estimate what will happen to the business given different scenarios using financial models and projections.
+
+It can understand user requirements through natural language conversations and guide them through the acquisition process. This ensures users have all the necessary information and insights to make well-informed, intelligent decisions quickly. It also allows them to focus on other important tasks, such as speaking with business owners to source potential deals and securing financing for promising opportunities.
+
+
 ### Proposed Solution/Approach
 
+Develop an AI-driven software that assists users in generating financial models and projections after natural language conversations with the program.
+  - The software will act as an assistant, providing information, scenario analyses, ROI analyses, and more.
+  - Through user-friendly interactions similar to the interactions between a decision maker and an analyst (natural language), the user can get most of the benefits of hiring a full time analyst for a tiny fraction of the financial costs and an even smaller fraction of the time that it takes to work with an analyst. 
+
+
 ### Project Outline and Timeline
-What are the steps to complete the project? State your milestones and the dates you want to complete them. 
+  1. **Requirement Gathering and Analysis** - Understand all the functionalities and features the software needs. Understand the pain points of business buyers to see what problems relating to analysis affect them the most.
+  2. **Development of Core AI Engine** - This will include natural language processing capabilities, financial model generation, etc.
+  3. **Interface Design and Development**  - Begin with a simple interface probably just a textual conversation where the tool could just return spreadsheets. But I will need to try out different potential interfaces that could be used for this tool to find the most effective way for a user to interact with a tool like this.
+  4. **Integration of the AI Engine with the Interface** - Ensure a seamless interaction between the user and the software.
+  5. **Testing and Refinement** - Test the software, refine based on feedback.
+
+
+
+
 
 ## Goals of project 
-**Due October 26, 11:59pm**
 
-Describe 1-5 goals of the project. 
-### Goal 1
-### Goal 2
+### Goal 1:
+The tool needs to provide accurate and understandable financial models.
+### Goal 2:
+The tool needs to Educate users on the significance of the generated financial models and how they can interpret them, ensuring they can actually use them to make faster and more informed decisions.
+### Goal 3:
+Offer a way to see what would happen in different scenarios and given different input variables so the user can see how different variables can affect the outcome (focusing on how everything affects the potential “seller's discretionary income” especially)
+### Goal 4:
+Enhance the credibility and negotiation power of business buyers in front of potential investors and banks by providing them thorough analysis of the potential investment (which investors/banks really like)
+### Goal 5:
+Ensure the software is user-friendly, and can iteratively guide and educate users all the way from initial thoughts and inputs about the business all the way to their their a final decision. (For example asking for more information when more information can help the program generate better financial models vs just making a poor analysis using only whatever information the user has already provided)
+
+
+
+
 
 ## Project Metrics 
-**Due October 26, 11:59pm**
 
-Compose 2-5 metrics to determine the success of the project. These should be measureable, and should translate to a letter grade for each. 
-### Metric 1
-### Metric 2
+### Metric 1: Accuracy of Financial Models
+Measurement: Evaluate the correctness of the financial models generated by the software
+* A Grade: Less than 5% error rate and the model was able to catch its own errors.
+* B Grade: 5-15% error rate and the model was able to catch its own errors.
+* C Grade: 15-25% error rate and the model wasn’t able to catch its own errors.
+* D Grade: 25-40% error rate and the model wasn’t able to catch its own errors.
+* F Grade: Over 40% error rate and the model wasn’t able to catch its own errors.
+
+### Metric 2: User-Friendliness and Comprehensibility
+Measurement: Collect user feedback on the naturalness of the interaction with the tool and how well it explained generated models.
+* A Grade: Most users found the interaction very natural and models very comprehensible.
+* B Grade: Most users found the interaction natural and models comprehensible.
+* C Grade: Most  users felt the interaction was somewhat natural and models were somewhat comprehensible.
+* D Grade: Most users felt the interaction was not very natural and had difficulty understanding models.
+* F Grade: Most users found the interaction unnatural and models hard to understand.
+
+### Metric 3: Completeness of Data Acquisition
+Measurement: Assess if the tool ensured it had all the necessary data before generating financial models.
+* A Grade: In over 95% of cases, the tool verified it had complete data before generating models.
+* B Grade: In 85-95% of cases, the tool verified it had complete data before generating models.
+* C Grade: In 75-85% of cases, the tool verified it had complete data before generating models.
+* D Grade: In 65-75% of cases, the tool verified it had complete data before generating models.
+* F Grade: In less than 65% of cases, the tool verified it had complete data before generating models.
+
+
+
+
+
 
 ## Self-Evaluation
 **Due December 8, 11:59pm**
