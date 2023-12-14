@@ -115,3 +115,17 @@ What do you take away from the project? Has this changed how you understand AI? 
 100-500 words
 
 Do you plan on continuing the project? What will you do with what you've learning?
+
+
+
+
+
+# How to run the program:
+
+install Node.js onto your computer
+open a terminal in the folder you cloned this repository in
+
+run this command in your terminal at this folder
+'node server.js'
+
+open http://localhost:3000 in your browser to see the webapp running
