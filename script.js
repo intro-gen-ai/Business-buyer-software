@@ -111,6 +111,42 @@ function drawPieChart(principal, interest) {
     });
 }
 
+// Function to send queries to ChatGPT or a similar AI
+async function askAI() {
+    const query = document.getElementById('userQuery').value;
+    const responseElement = document.getElementById('aiResponse');
+
+    if (!query) {
+        responseElement.innerText = "Please enter a question.";
+        return;
+    }
+
+    try {
+        const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer 23hH9yGb5nsF7uoIHKSpT3BlbkFJUpw0Xscu5bswHZR71WBh', // Replace with your API key
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                prompt: query,
+                max_tokens: 150
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.statusText);
+        }
+
+        const data = await response.json();
+        responseElement.innerText = data.choices[0].text;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation: ', error);
+        responseElement.innerText = 'Failed to get response from AI.';
+    }
+}
+
+// Ensure this event listener is at the bottom of your script.js file
 document.querySelectorAll('input[type=text]').forEach(input => {
     input.addEventListener('input', function(e) {
         this.value = this.value.replace(/[^0-9\.]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ",");

@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
 }
@@ -19,6 +19,7 @@ body {
     max-width: 80%;
     max-height: 90vh;
     overflow: auto;
+    margin-bottom: 20px; /* Spacing between sections */
 }
 
 .calculator-section {
@@ -26,20 +27,16 @@ body {
     padding: 10px;
 }
 
-.inputs {
+.inputs, .outputs {
     max-width: 50%;
 }
 
-.outputs {
-    max-width: 50%;
-}
-
-.input-field {
+.input-field, .ai-section {
     margin-bottom: 15px;
 }
 
-input {
-    width: calc(100% - 20px);
+input[type=text] {
+    width: calc(100% - 22px);
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
@@ -61,7 +58,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-#result {
+#result, #aiResponse {
     margin-top: 20px;
     text-align: left;
     display: none;
@@ -74,4 +71,20 @@ button:hover {
     max-width: 300px;
     max-height: 300px;
     margin-top: 20px;
+}
+
+/* Styles for AI interaction section */
+.ai-section {
+    text-align: center;
+    width: 80%;
+}
+
+.ai-section input[type=text] {
+    width: calc(70% - 22px); /* Adjust width as necessary */
+    display: inline-block; /* For inline with button */
+}
+
+.ai-section button {
+    width: 20%; /* Adjust width as necessary */
+    display: inline-block; /* For inline with input */
 }

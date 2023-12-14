@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Calculator</title>
+    <title>Financial Calculator with AI Assistance</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -43,6 +43,17 @@
             <canvas id="loanChart" width="400" height="400"></canvas>
         </div>
     </div>
+
+    <!-- ChatGPT or AI interaction section -->
+    <div class="ai-section">
+        <h2>Ask a Financial Question</h2>
+        <div>
+            <input type="text" id="userQuery" placeholder="Ask a financial question">
+            <button onclick="askAI()">Ask</button>
+        </div>
+        <div id="aiResponse"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
