@@ -122,13 +122,23 @@ async function askAI() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ prompt: query, max_tokens: 150 })
         });
-        const data = await response.json();
-        responseElement.innerText = data.choices[0].text;
+
+        const text = await response.text(); // or response.json(), depending on response format
+
+        if (text) {
+            responseElement.innerText = text;
+            responseElement.style.display = 'block'; // Make the element visible
+        } else {
+            responseElement.innerText = 'No response from AI.';
+            responseElement.style.display = 'block'; // Make the element visible
+        }        
     } catch (error) {
         console.error('Error:', error);
         responseElement.innerText = 'Failed to get response.';
+        responseElement.style.display = 'block'; // Make the element visible even in case of error
     }
 }
+
 
 
 // Ensure this event listener is at the bottom of your script.js file
