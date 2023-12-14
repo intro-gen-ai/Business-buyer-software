@@ -13,27 +13,27 @@
             <h1>Financial Calculator</h1>
             <div class="input-field">
                 <label for="monthlyRevenue">Monthly Revenue ($):</label>
-                <input type="text" id="monthlyRevenue" placeholder="Enter monthly revenue">
+                <input type="text" class="numeric-input" id="monthlyRevenue" placeholder="Enter monthly revenue">
             </div>
             <div class="input-field">
                 <label for="monthlyExpenses">Monthly Expenses ($):</label>
-                <input type="text" id="monthlyExpenses" placeholder="Enter monthly expenses">
+                <input type="text" class="numeric-input" id="monthlyExpenses" placeholder="Enter monthly expenses">
             </div>
             <div class="input-field">
                 <label for="investmentAmount">Investment Amount ($):</label>
-                <input type="text" id="investmentAmount" placeholder="Enter investment amount">
+                <input type="text" class="numeric-input" id="investmentAmount" placeholder="Enter investment amount">
             </div>
             <div class="input-field">
                 <label for="loanAmount">Total Amount of Loans ($):</label>
-                <input type="text" id="loanAmount" placeholder="Enter loan amount">
+                <input type="text" class="numeric-input" id="loanAmount" placeholder="Enter loan amount">
             </div>
             <div class="input-field">
                 <label for="interestRate">Interest Rate on Loans (%):</label>
-                <input type="text" id="interestRate" placeholder="Enter interest rate">
+                <input type="text" class="numeric-input" id="interestRate" placeholder="Enter interest rate">
             </div>
             <div class="input-field">
                 <label for="loanTerm">Term Length of Loans (years):</label>
-                <input type="text" id="loanTerm" placeholder="Enter loan term">
+                <input type="text" class="numeric-input" id="loanTerm" placeholder="Enter loan term">
             </div>
             <button onclick="calculate()">Calculate</button>
             <button onclick="clearForm()">Clear</button>
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <!-- ChatGPT or AI interaction section -->
+    <!-- AI Chat Section -->
     <div class="ai-section">
         <h2>Ask a Financial Question</h2>
         <div>
