@@ -128,6 +128,6 @@ Do you plan on continuing the project? What will you do with what you've learnin
    
 3. Open a terminal in the folder you cloned this repository in
    
-4. Run this command in your terminal at this folder --  'node server.js'
+4. Run this command in your terminal at this folder --  'sudo node server.js'
    
 5. Open http://localhost:3000 in your browser to see the webapp running
