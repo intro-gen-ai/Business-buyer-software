@@ -124,7 +124,7 @@ Do you plan on continuing the project? What will you do with what you've learnin
 
 1. First clone the repository in a convenient folder on your computer
 
-2. Then install [Node.js]([url](https://nodejs.org/en)) onto your computer
+2. Then install Node.js onto your computer, you can do this at this link: https://nodejs.org/
    
 3. Open a terminal in the folder you cloned this repository in
    
