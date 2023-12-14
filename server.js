@@ -21,7 +21,7 @@ app.post('/ask-openai', async (req, res) => {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer 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`,
+                'Authorization': `Bearer ADD_THE_API_KEY_HERE`, //ADD THE API KEY HERE!!!!!
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -36,7 +36,7 @@ app.post('/ask-openai', async (req, res) => {
         // end of what is removed
         const data = await response.json();
         console.log(data);  // Log the response data for debugging
-        
+
         if (data.choices && data.choices.length > 0) {
             res.send(data.choices[0].message.content);
         } else {
