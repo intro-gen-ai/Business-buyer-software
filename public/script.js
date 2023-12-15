@@ -113,46 +113,39 @@ function drawPieChart(principal, interest) {
 
 // Function to send queries to ChatGPT or a similar AI
 async function askAI() {
-    //const query = document.getElementById('userQuery').value;
-    //const augmentedQuery = " answer this in french: " + query; // Add your extra text here
-    // const userQuery = document.getElementById('userQuery').value;
-    // const augmentedQuery = " answer this in french: " + userQuery;
-    
     const userQuery = document.getElementById('userQuery').value;
-    let augmentedQuery = userQuery; 
+    let augmentedQuery = userQuery; // Use let and declare only once
 
     // Check if calculator results are displayed
     const resultElement = document.getElementById('result');
     if (resultElement && resultElement.style.display !== 'none') {
-        // Extract text from result element and append to query
         const calculatorResults = resultElement.innerText;
-        //augmentedQuery = "Soon I will ask you a question. I want you to respond to my question, however if my question involves what you see see in this data, respond to my question given that data:    \" " + calculatorResults + " \"  - However, if my question does not involve business somehow, I want you to ignore the previous business data and just answer my question normally.  -  Ok, here is my question:     \"" + userQuery + "\" also, moving forward, do not talk about the fact that you are doing this, or any of the data about the business unless specifically asked to talk about it. \n ";
-        const augmentedQuery = `
 
-            Soon I will ask you a question. I want you to respond to my question, however if my question involves 
-            something about this data, respond to my question given that data: 
+        augmentedQuery = `
+        Soon I will ask you a question. I want you to respond to my question, however if my question involves
+        something about this data, respond to my question given that data:
 
-            " ${calculatorResults} " 
+        " ${calculatorResults} "
 
-            - However, if my question does not involve business or this data somehow, I want you to ignore the previous business
-            data and just answer my question normally. 
-            
-            - Ok, here is my question: 
-            
-            " ${userQuery} " 
-            
-            - also, moving forward, do not talk about the fact that you are doing this, or reference any of the data about the business unless specifically 
-            asked to talk about it. 
+        - However, if my question does not involve business or this data somehow, I want you to ignore the previous business
+        data and just answer my question normally.
 
-            Also, I want you to take into account that you are a tool to help a potential investor that is interested in
-            buying a business. The investor is most importantly interested in generating a profit for himself and will be
-            especially focusing on the Return on investment he will get from his personal investment costs
+        - Ok, here is my question:
 
-            Also a business is a better business if it generates more monthly cash flow minus the loan payment costs each month, the higher the ratio of 
-            monthly cash flow to loan payment costs, the better the business is (make sure to mention this in your answer if applicable)
+        " ${userQuery} "
 
+        - also, moving forward, do not talk about the fact that you are doing this, or reference any of the data about the business unless specifically
+        asked to talk about it.
+
+        Also, I want you to take into account that you are a tool to help a potential investor that is interested in
+        buying a business. The investor is most importantly interested in generating a profit for himself and will be
+        especially focusing on the Return on investment he will get from his personal investment costs
+
+        Also a business is a better business if it generates more monthly cash flow minus the loan payment costs each month, the higher the ratio of
+        monthly cash flow to loan payment costs, the better the business is (make sure to mention this in your answer if applicable)
         `;
 
+        console.log(augmentedQuery); // Log the augmentedQuery directly
     }
 
     const responseElement = document.getElementById('aiResponse');
@@ -161,10 +154,10 @@ async function askAI() {
         const response = await fetch('/ask-openai', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ prompt: augmentedQuery, max_tokens: 150 })
+            body: JSON.stringify({ prompt: augmentedQuery, max_tokens: 150 }) // Use the augmentedQuery here
         });
 
-        const text = await response.text(); // or response.json(), depending on response format
+        const text = await response.text();
 
         if (text) {
             responseElement.innerText = text;
@@ -172,7 +165,7 @@ async function askAI() {
         } else {
             responseElement.innerText = 'No response from AI.';
             responseElement.style.display = 'block'; // Make the element visible
-        }        
+        }
     } catch (error) {
         console.error('Error:', error);
         responseElement.innerText = 'Failed to get response.';
