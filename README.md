@@ -122,10 +122,12 @@ Do you plan on continuing the project? What will you do with what you've learnin
 
 # How to run the program:
 
-install Node.js onto your computer
-open a terminal in the folder you cloned this repository in
+1. First clone the repository in a convenient folder on your computer
 
-run this command in your terminal at this folder
-'node server.js'
-
-open http://localhost:3000 in your browser to see the webapp running
+2. Then install Node.js onto your computer, you can do this at this link: https://nodejs.org/
+   
+3. Open a terminal in the folder you cloned this repository in
+   
+4. Run this command in your terminal at this folder --  'sudo node server.js'
+   
+5. Open http://localhost:3000 in your browser to see the webapp running
