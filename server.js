@@ -1,4 +1,6 @@
-//require('dotenv').config();
+// Allowing the use of .env files to add in API keys vs making them publically available and posting them to github
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Importing modules using ESM syntax
 import express from 'express';
@@ -6,7 +8,8 @@ import fetch from 'node-fetch';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
-//const apiKey = process.env.OPENAI_API_KEY;
+// added this apikey variable setup here
+const apiKey = process.env.OPENAI_API_KEY;
 
 const app = express();
 app.use(express.json());
@@ -18,13 +21,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.static(join(__dirname, 'public')));
 
 
-// AI request handling endpoint
+// AI request handling endpoint - changed this to add the apikey variable
 app.post('/ask-openai', async (req, res) => {
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer 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`,
+                'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
