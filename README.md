@@ -14,7 +14,7 @@ https://www.loom.com/share/963bee99987446a9be07314403421d37?sid=cb898880-30e4-44
 ## LINK TO THE LIVE SITE:
 
 
-financialcalculator.jeremiahwoldabezgi.website
+[financialcalculator.jeremiahwoldabezgi.website](https://financialcalculator.jeremiahwoldabezgi.website/)
 
 
 
