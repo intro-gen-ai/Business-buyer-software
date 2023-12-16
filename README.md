@@ -14,7 +14,7 @@ https://www.loom.com/share/963bee99987446a9be07314403421d37?sid=cb898880-30e4-44
 ## LINK TO THE LIVE SITE:
 
 
-https://financial-calculator-w-ai-v1-89627d77a21f.herokuapp.com
+financialcalculator.jeremiahwoldabezgi.website
 
 
 
