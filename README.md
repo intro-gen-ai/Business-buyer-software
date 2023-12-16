@@ -175,10 +175,29 @@ Open a terminal in the folder you cloned this repository in
 
 1. First install Node.js onto your computer, you can do this at this link: https://nodejs.org/
 
-2. Then clone the repository and place it in a convenient folder on your computer 
+2. Then clone the repository and place it in a convenient folder on your computer
 
-3. Open a terminal in that folder
+3. Then open the .env.example file in a basic text or code editor and replace the 'insert_your_api_key_here' with your API key from OpenAI 
 
-4. Run this command in your terminal (at this folder) --  'sudo node server.js'
+![Screenshot 2023-12-16 at 5 47 17 PM](https://github.com/intro-gen-ai/Business-buyer-software/assets/97208860/9e580827-8284-4569-950b-e4a03605336b)
 
-5. Open http://localhost:3000 in your browser to see the webapp running
+
+and then remove the .example from the .env.example filename until the file is now just called .env
+
+  * For example:
+    
+    * Before:
+      
+        ![Screenshot 2023-12-16 at 5 50 45 PM](https://github.com/intro-gen-ai/Business-buyer-software/assets/97208860/ae057ffb-cdbc-4d6e-971c-1a8c6d84c6f1)
+
+    * After:
+   
+        ![Screenshot 2023-12-16 at 5 50 41 PM](https://github.com/intro-gen-ai/Business-buyer-software/assets/97208860/ea59979c-6ed4-4415-8665-0d88f51c125c)
+
+
+5. Next, open a terminal in the cloned repository's folder
+
+6. Run this command in your terminal (while in this folder) --  'sudo node server.js'
+
+7. Open http://localhost:3000 in your browser to see the webapp running locally on your computer!
+
