@@ -24,7 +24,7 @@ app.post('/ask-openai', async (req, res) => {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer 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`,
+                'Authorization': `Bearer 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`,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
