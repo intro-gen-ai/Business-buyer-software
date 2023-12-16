@@ -8,7 +8,7 @@ This is a tool to help potential business buyers make more informed decisions wh
 
 ## LINK TO THE VIDEO EXPLANATION:
 
-https://www.loom.com/share/376e8af38bac4302816abccb226b04f9?sid=3cc1a5a9-192e-4740-b6b2-6406a9aac2bc
+https://www.loom.com/share/963bee99987446a9be07314403421d37?sid=cb898880-30e4-445b-a2d9-efb1d7603c29
 
 
 ## LINK TO THE LIVE SITE:
